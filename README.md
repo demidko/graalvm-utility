@@ -48,5 +48,5 @@ To clean up Docker use `docker system prune -fa`
 
 ## Interop with Java
 
-See [JNR project](https://github.com/jnr/jnr-ffi).
+By default, you can use any java class or library in this project.
 
