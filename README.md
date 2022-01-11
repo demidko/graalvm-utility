@@ -17,8 +17,8 @@ GitHub CI automatically generates versions of the application for different oper
 
 ## Build
 
-You can build the utility yourself from the source code. We need GCC or LLVM or Visual Studio toolchain, and xmake build
-system. If you are using Windows, you need to configure [`windowsVsVarsPath`](build.gradle.kts) property.
+You can build the utility yourself from the source code. We need GCC or LLVM or Visual Studio toolchain. If you are
+using Windows, you need to configure [`windowsVsVarsPath`](build.gradle.kts) property.
 
 ```shell
 ./gradlew clean build
