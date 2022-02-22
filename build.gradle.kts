@@ -7,7 +7,6 @@ plugins {
   id("com.palantir.graal") version "0.10.0"
 }
 dependencies {
-  implementation("com.github.vidstige:jadb:v1.2.1")
   implementation("com.github.ajalt.clikt:clikt:3.4.0")
   testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
   testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.25")
@@ -25,11 +24,11 @@ tasks.test {
   useJUnitPlatform()
 }
 graal {
-  graalVersion("21.3.0")
   javaVersion("17")
+  graalVersion("22.0.0.2")
+  option("--no-fallback")
   mainClass("AppKt")
   outputName(projectDir.name)
-  option("--no-fallback")
   windowsVsVarsPath("C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Auxiliary\\Build\\vcvars64.bat")
 }
 tasks.build {
