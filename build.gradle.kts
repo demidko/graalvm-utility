@@ -3,14 +3,14 @@ repositories {
   maven("https://jitpack.io")
 }
 plugins {
-  kotlin("jvm") version "1.6.20"
+  kotlin("jvm") version "1.7.0"
   id("com.palantir.graal") version "0.10.0"
 }
 dependencies {
-  implementation("com.github.ajalt.clikt:clikt:3.4.0")
+  implementation("com.github.ajalt.clikt:clikt:3.5.0")
   testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
   testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.25")
-  testImplementation("io.mockk:mockk:1.12.2")
+  testImplementation("io.mockk:mockk:1.12.4")
 }
 tasks.compileKotlin {
   kotlinOptions.jvmTarget = "17"
