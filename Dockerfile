@@ -1,5 +1,5 @@
 FROM gcc as toolchain
-RUN apt -y update && apt -y upgrade && apt -y install openjdk-18-jdk
+RUN apt -y update && apt -y upgrade && apt -y install openjdk-17-jdk
 
 FROM toolchain as builder
 WORKDIR /project
