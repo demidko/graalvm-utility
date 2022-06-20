@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 17
+    - name: Set up JDK 18
       uses: actions/setup-java@v2
       with:
-        java-version: '17'
+        java-version: '18'
         distribution: 'adopt'
         cache: gradle
     - name: Grant execute permission for gradlew
@@ -30,13 +30,13 @@ jobs:
         name: linux-app
         path: build/graal/*
   build-macos-app:
-    runs-on: macos-11
+    runs-on: macos-12
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 17
+    - name: Set up JDK 18
       uses: actions/setup-java@v2
       with:
-        java-version: '17'
+        java-version: '18'
         distribution: 'adopt'
         cache: gradle
     - name: Grant execute permission for gradlew
@@ -55,10 +55,10 @@ jobs:
     - uses: microsoft/setup-msbuild@v1.1
       with:
        vs-version: '17'
-    - name: Set up JDK 17
+    - name: Set up JDK 18
       uses: actions/setup-java@v2
       with:
-        java-version: '17'
+        java-version: '18'
         distribution: 'adopt'
         cache: gradle
     - name: Build with Gradle
