@@ -4,7 +4,7 @@ repositories {
 }
 plugins {
   kotlin("jvm") version "1.7.10"
-  id("com.palantir.graal") version "0.10.0"
+  id("com.palantir.graal") version "0.12.0"
 }
 dependencies {
   implementation("com.github.ajalt.clikt:clikt:3.5.0")
