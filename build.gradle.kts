@@ -25,7 +25,7 @@ tasks.test {
 }
 graal {
   javaVersion("17")
-  graalVersion("22.1.0")
+  graalVersion("22.2.0")
   option("--no-fallback")
   mainClass("AppKt")
   outputName(projectDir.name)
