@@ -3,14 +3,14 @@ repositories {
   maven("https://jitpack.io")
 }
 plugins {
-  kotlin("jvm") version "1.7.10"
+  kotlin("jvm") version "1.7.20"
   id("com.palantir.graal") version "0.12.0"
 }
 dependencies {
   implementation("com.github.ajalt.clikt:clikt:3.5.0")
-  testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
-  testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.25")
-  testImplementation("io.mockk:mockk:1.12.4")
+  testImplementation("org.junit.jupiter:junit-jupiter:5.9.0")
+  testImplementation("com.google.truth:truth:1.1.3")
+  testImplementation("io.mockk:mockk:1.13.2")
 }
 tasks.compileKotlin {
   kotlinOptions.jvmTarget = "17"
@@ -25,7 +25,7 @@ tasks.test {
 }
 graal {
   javaVersion("17")
-  graalVersion("22.2.0")
+  graalVersion("22.3.0")
   option("--no-fallback")
   mainClass("AppKt")
   outputName(projectDir.name)
