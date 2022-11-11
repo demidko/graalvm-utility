@@ -12,13 +12,9 @@ dependencies {
   testImplementation("com.google.truth:truth:1.1.3")
   testImplementation("io.mockk:mockk:1.13.2")
 }
-tasks.compileKotlin {
+tasks.withType<KotlinCompile> {
   kotlinOptions.jvmTarget = "17"
-  kotlinOptions.freeCompilerArgs += "-opt-in=kotlin.time.ExperimentalTime"
-}
-tasks.compileTestKotlin {
-  kotlinOptions.jvmTarget = "17"
-  kotlinOptions.freeCompilerArgs += "-opt-in=kotlin.time.ExperimentalTime"
+  kotlinOptions.freeCompilerArgs += listOf("-opt-in=kotlin.time.ExperimentalTime")
 }
 tasks.test {
   useJUnitPlatform()
