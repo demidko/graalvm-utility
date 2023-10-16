@@ -1,5 +1,7 @@
 # Utility
 
+**Deprecated. See actual version: https://github.com/demidko/graal-utility**
+
 The cross-platform native Kotlin command line tool template.
 
 ## Usage
